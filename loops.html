@@ -9,13 +9,36 @@
     <h1>Loops</h1>
     <p>As the title suggests, this is a demonstration of various looping concepts.</p>
     <div class="forOfLoop">Here we're going to do a basic for...of loop:
-        <ul><script>
+        <ul><li><script>
             const pcBrands = ["Dell", "Hewlett-Packard", "Asus", "Lenovo", "Samsung", "Toshiba"]
             for (const comps of pcBrands) { 
                 console.log(comps);
             }
             </script>
-        </ul>
+        </li></ul>
+    </div>
+
+    <div class="toUpper">And now a function to make the same array upper case:
+        <ul><li><script>
+            function toUpper(compStrings) {
+               return compStrings.toUpperCase();
+            }
+
+            const pcBrands2 = ["Dell", "Hewlett-Packard", "Asus", "Lenovo", "Samsung", "Toshiba"]
+
+            const upperComps = pcBrands2.map(toUpper);
+            console.log(upperComps);
+        </script></li></ul>
+    </div>
+
+    <div class="filter">Let's do a filter, this time by length of the word of car brands:
+        <ul><li><script>
+            const vehicles = ["Toyota", "Honda", "Ford", "Chevrolet", "Mercedes", "Pontiac"];
+            const filtered = vehicles.filter(word => word.length > 5);
+            console.log(filtered);
+        </script>
+
+        </li></ul>
     </div>
 
 </body>
