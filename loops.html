@@ -31,7 +31,8 @@
         </script></li></ul>
     </div>
 
-    <div class="filter">Let's do a filter, this time by length of the word of car brands:
+    <div class="filter">Let's do a filter, this time by length of the word of car brands by more
+        than 5 characters:
         <ul><li><script>
             const vehicles = ["Toyota", "Honda", "Ford", "Chevrolet", "Mercedes", "Pontiac"];
             const filtered = vehicles.filter(word => word.length > 5);
@@ -39,6 +40,31 @@
         </script>
 
         </li></ul>
+    </div>
+
+    <div class="forCalc">Here we're going to print (poorly, as of now) results of a calculator from 
+        1x1 to 9x9:
+        <ul><li>
+            <button id="calculate">Calculate</button><button id="clear">Clear</button>
+            <div id="results"></div>
+            <script>
+            const results = document.querySelector("#results");
+
+            function calculate() {
+                for (let i = 1; i < 10; i++) {
+                    const newResult = `${i} x ${i} = ${i * i}`;
+                    results.textContent += `${newResult}\n`;
+                }
+                results.textContent += "\nFinished!";
+            }
+
+            const calculateBtn = document.querySelector("#calculate");
+            const clearBtn = document.querySelector("#clear");
+
+            calculateBtn.addEventListener("click", calculate);
+            clearBtn.addEventListener("click", () => (results.textContent = ""));
+        </script></li></ul>
+
     </div>
 
 </body>
