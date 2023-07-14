@@ -68,10 +68,13 @@
         <div class="carsConst">Using an array of Disney Cars, we will test a const of loop:
             <ul><li><script>
                 const disneyCars = ["McQueen", "Mater", "Sally", "Cruz", "Hudson"]
+                let faveQuote = "My favorite Disney Cars are "
 
-                for (let i = 0; i < disneyCars.length; i++) {
-                    console.log(disneyCars[i]);
+                for (const car of disneyCars) {
+                    faveQuote += `${car}, `;
                 }
+                
+                console.log(faveQuote);
                 
             </script></li></ul>
 
