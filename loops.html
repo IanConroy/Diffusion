@@ -51,7 +51,7 @@
             const results = document.querySelector("#results");
 
             function calculate() {
-                for (let i = 1; i < 10; i++) {
+                for (let i = 1; i < 13; i++) {
                     const newResult = `${i} x ${i} = ${i * i}`;
                     results.textContent += `${newResult}\n`;
                 }
@@ -64,6 +64,17 @@
             calculateBtn.addEventListener("click", calculate);
             clearBtn.addEventListener("click", () => (results.textContent = ""));
         </script></li></ul>
+
+        <div class="carsConst">Using an array of Disney Cars, we will test a const of loop:
+            <ul><li><script>
+                const disneyCars = ["McQueen", "Mater", "Sally", "Cruz", "Hudson"]
+
+                for (const car of disneyCars) {
+                    console.log(car);
+                }
+            </script></li></ul>
+
+        </div>
 
     </div>
 
