@@ -70,10 +70,14 @@
                 const disneyCars = ["McQueen", "Mater", "Sally", "Cruz", "Hudson"]
                 let faveQuote = "My favorite Disney Cars are "
 
-                for (const car of disneyCars) {
-                    faveQuote += `${car}, `;
+                for (let i = 0; i < disneyCars.length; i++) {
+                    if (i === disneyCars.length - 1) {
+                        faveQuote += `and ${disneyCars[i]}.`;
+                    } else {
+                        faveQuote += `${disneyCars[i]}, `;
+                    }
                 }
-                
+
                 console.log(faveQuote);
                 
             </script></li></ul>
