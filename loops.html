@@ -86,5 +86,44 @@
 
     </div>
 
+    <div class="useBreak">
+        <label for="search">Search by NFL player name:</label>"
+        <input id="search" type="text" />
+        <button>Search</button>
+        <p></p>
+
+        <script>
+            const playerNames = [
+                "Jefferson:28",
+                "McCaffrey:23",
+                "Ekeler:30",
+                "Chase:1",
+                "Robinson:7",
+                "Kupp:10"
+            ];
+            const para = document.querySelector("p");
+            const input = document.querySelector("input");
+            const btn = document.querySelector("button");
+
+            btn.addEventListener("click", () => {
+                const searchName = input.value.toLowerCase();
+                input.value = "";
+                input.focus();
+                para.textContent = "";
+                for (const playerName of playerNames) {
+                    const splitName = playerName.split(":");
+                    if (splitName[0].toLowerCase() === searchName) {
+                        para.textContent = `${splitName[0]'s jersey number is ${splitName[1]}.`;
+                    break;
+                    }
+                }
+                    if (para.textContent === "") {
+                        para.textContent = "player not found";
+                    }
+                }
+            });
+        </script>
+    </div>
+
 </body>
 </html>
