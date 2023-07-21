@@ -125,5 +125,33 @@
         </script>
     </div>
 
+    <div class="tryContinue">Here we're gonna experiment with a continue statement.
+        <label for="number">Enter number: </label>
+        <input id="number" type="number" />
+        <button1>Generate integer squares</button>
+
+        <p>Output:</p>
+        <script>
+            const para1 = document.querySelector("p");
+            const input1 = document.querySelector("input");
+            const btn1 = document.querySelector("button1");
+
+            btn1.addEventListener("click", () => {
+                para1.textContent = "Output: ";
+                const num = input.value;
+                input1.value = "";
+                input1.focus();
+                for (let i = 1; i <= num; i++) {
+                    let sqRoot = Math.sqrt(i);
+                    if (Math.floor(sqRoot) !== sqRoot) {
+                        continue;
+                    }
+                    para1.textContent += `${i} `;
+                }
+            });
+        </script>
+
+    </div>
+
 </body>
 </html>
