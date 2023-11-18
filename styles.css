@@ -1,0 +1,17 @@
+body {
+    background-color:#202020;
+    color:#DBDBDB;
+}
+
+.greenHere {
+    color:green;
+}
+
+.yellowHere {
+    color:yellow;
+}
+
+.twoColumns {
+    display:grid;
+    grid-template-columns: minmax(2rem, 2fr) minmax(min-content, 2rem) minmax(2rem, 2fr);
+}
