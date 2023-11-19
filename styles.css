@@ -13,5 +13,5 @@ body {
 
 .twoColumns {
     display:grid;
-    grid-template-columns: minmax(2rem, 2fr) minmax(min-content, 2rem) minmax(2rem, 2fr);
+    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 2rem) minmax(2rem, 2fr);
 }
