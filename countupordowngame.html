@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App Right Now</title>
+</head>
+<body>
+    <div class="numCounter">
+        <h1 id="h1Counter">000</h1>
+        <button id="increaser" onclick="increaserz()">Increase</button>
+        <button id="decreaser" onclick="decreaserz()">Decrease</button>
+        <script>
+            let h1Count = document.getElementById("h1Counter").innerHTML;
+
+            let increaseBtn = document.getElementById("increaser");
+            let decreaseBtn = document.getElementById("decreaser");
+
+
+            function increaserz() {
+                h1Count = parseInt(h1Count) + 1;
+                document.getElementById("h1Counter").innerHTML = h1Count.toString().padStart(3, '0');
+            }
+            function decreaserz() {
+                h1Count = parseInt(h1Count) - 1;
+                document.getElementById("h1Counter").innerHTML = h1Count.toString().padStart(3, '0');
+            }
+        </script>
+    
+    </div>
+</body>
+</html>
