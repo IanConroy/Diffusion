@@ -16,5 +16,26 @@
         <li><a href="loops.html">Loops</a></li>
         <li>let a = 7;<br>a += 3;<br>let b = 14;<br>b -= 4;</li>
     </ul>
+    <h6>Now, here we take this:</h6>
+    <article>
+        <p>
+            function locateGreater(x, y) {
+                if(x > y) {
+                    return "x is greater";
+                }
+                else {
+                    return "y is greater or equal";
+                }
+            }
+        </p>
+    </article>
+    <h6>And revise it to this to use a conditional, AKA ternary operator:</h6>
+    <article>
+        <p>
+            function locateGreater(x, y) {
+                return x > y ? "x is greater" : "y is greater or equal";
+            }
+        </p>
+    </article>
 </body>
 </html>
